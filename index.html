@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi World Public School</title>
+    <link rel="icon" type="image/x-icon" href="school-icons/logo-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- LEFT: Logo -->
+          <a href="#" class="flex items-center">
+            <img
+              src="school-images/Logo.svg"
+              alt="Delhi World Public School"
+              class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+            />
+          </a>
+
+          <!-- RIGHT: Desktop Menu -->
+          <nav
+            class="hidden lg:flex items-center gap-10 text-gray-700 font-medium"
+          >
+            <a href="#" class="relative text-black"> Home </a>
+
+            <a href="#" class="hover:text-black"> About </a>
+
+            <a href="#" class="hover:text-black"> Philosophy </a>
+
+            <a href="#" class="hover:text-black"> Academic Programs </a>
+
+            <a href="#" class="hover:text-black"> Facilities </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menuBtn"
+            class="lg:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100"
+          >
+            <svg
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden lg:hidden border-t bg-white">
+        <nav class="flex flex-col p-4 space-y-3 text-gray-700 font-medium">
+          <a href="#" class="text-black"> Home </a>
+
+          <a href="#" class="hover:text-black"> About </a>
+
+          <a href="#" class="hover:text-black"> Philosophy </a>
+
+          <a href="#" class="hover:text-black"> Academic Programs </a>
+
+          <a href="#" class="hover:text-black"> Facilities </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner Content for Desktop and tablet -->
+      <section
+        class="relative w-full md:min-h-[500px] lg:min-h-[600px] flex items-center text-center hidden md:flex"
+      >
+        <!-- Background Image -->
+        <img
+          src="school-images/Banner.jpg"
+          alt="Delhi World Public School"
+          class="absolute inset-0 w-full h-[505px] lg:h-[600px] object-cover object-right"
+        />
+
+        <!-- Content -->
+        <div
+          class="relative ms-1 lg:ms-10 xl:ms-20 max-w-3xl px-6 text-white text-left"
+        >
+          <!-- Tag -->
+          <span
+            class="inline-block bg-[#1C6D3E] px-5 py-1 rounded-full text-lg font-semibold"
+          >
+            Admissions Open 2026–27
+          </span>
+
+          <!-- Heading -->
+          <h1
+            class="mt-6 text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight"
+          >
+            Shaping
+            <span class="italic font-medium text-[#C5B4AC]">Future Leaders</span
+            ><br />
+            with Excellence
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="mt-6 text-gray-200 text-lg md:text-base xl:text-xl max-w-xl md:max-w-[350px] lg:max-w-xl"
+          >
+            A CBSE-affiliated senior secondary school committed to academic
+            excellence, values, and holistic development.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a
+              href="#"
+              class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
+            >
+              Apply for admission
+            </a>
+
+            <a
+              href="#"
+              class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
+            >
+              Book a Campus Visit
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Banner content for mobile -->
+      <section class="relative w-full min-h-[350px] flex items-start md:hidden">
+        <!-- Background Image -->
+        <img src="school-images/Mob-banner.jpg" alt="Banner" />
+
+        <!-- Content -->
+        <div
+          class="absolute top-6 left-0 w-full max-w-3xl mx-auto px-4 text-white text-center md:text-left"
+        >
+          <!-- Heading -->
+          <h1 class="text-2xl md:text-3xl font-bold leading-snug">
+            Shaping <span class="italic text-[#C5B4AC]">Future Leaders</span>
+            <br class="hidden md:block" />
+            with Excellence
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="mt-2 text-gray-200 text-md md:text-sm max-w-lg mx-auto md:mx-0"
+          >
+            A CBSE-affiliated senior secondary school committed to academic
+            excellence, values, and holistic development.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-4 flex justify-center md:justify-start gap-2">
+            <a
+              href="#"
+              class="bg-[#2C3691] hover:bg-blue-800 px-4 py-1.5 text-xs md:px-5 md:py-2 md:text-sm rounded-full font-semibold transition"
+            >
+              Apply for admission
+            </a>
+
+            <a
+              href="#"
+              class="bg-gray-200 text-[#2C3691] hover:bg-gray-300 px-4 py-1.5 text-xs md:px-5 md:py-2 md:text-sm rounded-full font-semibold transition"
+            >
+              Book a Campus Visit
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="mt-14 px-4">
+        <div class="max-w-4xl mx-auto text-start sm:text-left md:text-center">
+          <!-- Heading -->
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-800">
+            Methodology
+          </h2>
+
+          <!-- Paragraph 1 -->
+          <p class="mt-6 text-gray-600 text-sm md:text-base leading-relaxed">
+            The School functions towards imparting Holistic Education which will
+            lead to the development of the students as responsible citizens. We
+            inculcate values in them so that they efficiently discharge their
+            duties as individuals and contribute towards world peace. We engage
+            and empower students with skills and knowledge through engaged
+            learning programs. We make our students custodians of their own
+            mental, physical and spiritual well-being.
+          </p>
+
+          <!-- Paragraph 2 -->
+          <p class="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
+            Extra curriculum activities in the school inculcate zeal and
+            enthusiasm in the students and also balances the physical and
+            emotional growth, boosting their stamina. The sportsman spirit
+            prepares the students for further challenges making them strong both
+            emotionally and physically. Equal opportunities are provided to
+            every student to showcase their talents.
+          </p>
+
+          <!-- Button -->
+          <div class="mt-8">
+            <a
+              href="#"
+              class="inline-block bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 text-sm md:text-base font-semibold rounded-full transition"
+            >
+              Explore Our Academics
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- School banner image -->
+      <section class="w-full overflow-hidden py-10">
+        <img
+          src="school-images/school-banner.png"
+          alt="School Banner"
+          class="w-full h-auto md:h-[70vh] lg:h-[80vh] object-cover"
+        />
+      </section>
+
+      <!-- our core philosophy -->
+      <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+          <!-- Top Title -->
+          <h2 class="text-6xl font-bold text-gray-300 mb-5">
+            Our Core Philosophy
+          </h2>
+
+          <!-- Content -->
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Left Image -->
+            <div class="md:w-1/2">
+              <img
+                src="school-images/philosophy.png"
+                alt="students"
+                class="w-full max-w-sm"
+              />
+            </div>
+
+            <!-- Right Content -->
+            <div class="md:w-1/2">
+              <h3 class="text-3xl font-semibold mb-6">School Aim</h3>
+
+              <ul class="space-y-5 text-gray-700 mb-8">
+                <li>• Positive and value based</li>
+                <li>• Securing and caring</li>
+                <li>• Stress free and Hygienic</li>
+                <li>• Inspiring, Motivating and challenging</li>
+                <li>• A happy, healthy, worthy citizen</li>
+                <li>• A respectful individual of the society</li>
+                <li>• A confident and independent lifelong learner</li>
+              </ul>
+
+              <button
+                class="bg-[#2C3691] text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-800 transition"
+              >
+                Explore Our Academics
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- vision and mission -->
+      <section class="pb-10">
+        <div class="max-w-6xl mx-auto px-6">
+          <div
+            class="rounded-2xl p-6 md:p-12 shadow-[0_0_20px_rgba(0,0,0,0.06)]"
+          >
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-300"
+            >
+              <!-- Vision -->
+              <div class="md:pr-10 pb-8 md:pb-0">
+                <h3 class="text-xl font-semibold mb-4">School Vision</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  DWPS is committed to provide education, incorporating Indian
+                  values and the Global culture, aiming to create global
+                  citizens as torch bearers of the dynamic and harmonious world.
+                </p>
+              </div>
+
+              <!-- Mission -->
+              <div class="md:pl-10 pt-8 md:pt-0">
+                <h3 class="text-xl font-semibold mb-4">School Mission</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  DWPS aim to instill in each child a sense of inquisitiveness
+                  and exploration, and an urge for experimentation, observation
+                  and synthesis. We endeavor to free the learning process from
+                  the confines of the four walls of the classroom and take it
+                  further to activity workshops, resources centers, laboratories
+                  and libraries, following the maxim of teaching less learning
+                  more.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Academice programs -->
+      <section class="w-full max-w-[1400px] mx-auto px-6 py-12">
+        <!-- Header -->
+        <div
+          class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10"
+        >
+          <div class="max-w-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3">
+              Academic Programs
+            </h2>
+
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Our academic program is designed to nurture curiosity, critical
+              thinking, and a love for lifelong learning. With experienced
+              educators and a well-structured curriculum, we empower students to
+              achieve their full potential.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex gap-3 justify-end mt-2 lg:mt-10">
+            <button
+              onclick="slide(-1)"
+              class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-green-600 hover:bg-green-50 transition"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onclick="slide(1)"
+              class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-green-600 hover:bg-green-50 transition"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="overflow-hidden">
+          <div
+            id="track"
+            class="flex gap-6 transition-transform duration-500 ease-out"
+          >
+            <!-- CARD 1 -->
+            <div
+              class="card relative flex-shrink-0 w-full sm:w-64 md:w-72 h-96 rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src="school-images/ap-1.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
+              <p
+                class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
+              >
+                Pre-Primary School
+              </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div
+              class="card relative flex-shrink-0 w-full sm:w-64 md:w-72 h-96 rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src="school-images/ap-2.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
+              <p
+                class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
+              >
+                Primary School
+              </p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div
+              class="card relative flex-shrink-0 w-full sm:w-64 md:w-72 h-96 rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src="school-images/ap-3.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
+              <p
+                class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
+              >
+                Middle School
+              </p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div
+              class="card relative flex-shrink-0 w-full sm:w-64 md:w-72 h-96 rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src="school-images/ap-4.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
+              <p
+                class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
+              >
+                Middle
+              </p>
+            </div>
+
+            <!-- CARD 5 -->
+            <div
+              class="card relative flex-shrink-0 w-full sm:w-64 md:w-72 h-96 rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src="school-images/ap-5.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
+              <p
+                class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
+              >
+                Senoir Secondary
+              </p>
+            </div>
+
+            <!-- CARD 6 -->
+            <div
+              class="card relative flex-shrink-0 w-full sm:w-64 md:w-72 h-96 rounded-2xl overflow-hidden shadow-lg group"
+            >
+              <img
+                src="school-images/ap-6.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"
+              ></div>
+              <p
+                class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
+              >
+                Secondary
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facilities -->
+
+      <section class="fac9-section w-full bg-gray-50 py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Facilities</h2>
+
+          <p class="text-gray-500 max-w-2xl mx-auto text-sm">
+            Our campus offers modern facilities designed to support holistic
+            learning and student development. From well-equipped classrooms and
+            laboratories to sports and activity spaces, every facility ensures a
+            safe and enriching environment.
+          </p>
+        </div>
+
+        <div class="fac9-wrapper relative max-w-6xl mx-auto">
+          <!-- arrows -->
+          <button
+            class="fac9-btn fac9-prev absolute -left-6 top-1/2 -translate-y-1/2 text-green-600 hidden lg:flex"
+          >
+            ❮
+          </button>
+
+          <button
+            class="fac9-btn fac9-next absolute -right-6 top-1/2 -translate-y-1/2 text-green-600  hidden lg:flex"
+          >
+            ❯
+          </button>
+
+          <div class="fac9-slider overflow-hidden">
+            <div class="fac9-track flex transition-transform mb-4 duration-500">
+              <!-- ITEM 1 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-1.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Auditorium</h3>
+
+                    <p class="text-gray-500 text-sm mb-6">
+                      The campus includes an ultra modern hi-tech auditorium which has a capacity of over 1000. It provides the perfect platform for students to exhibit their talent. The cinema-styled auditorium is of professional standards and motivates students to perform on a grand stage while accustoming them to face the spotlight with confidence.
+                    </p>
+
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 2 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-2.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Curriculum</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      The Curriculum of DWPS World Foundation adheres to the National Curriculum Framework 2005 (NCF 2005) and the CBSE curriculum. The Foundation believes that the classroom experiences of children are to be organized in a manner that permits them to construct knowledge in consonance with his/her own nature and context, thus providing equal learning opportunities to all. Teaching aims at enhancing the child’s innate desire and acumen to learn. Activity is at the heart of the child’s attempt to sense the world around. Therefore, every resource is deployed in a child-centric manner to enable them to express, handle objects, explore their natural and social milieu and to grow up in good health.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 3 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-3.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Sports</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      Professionally-laid cricket pitch with practice netsFootball ground, Hockey ground, Tennis courts and practice wall, Basketball courtsVolleyball courts, Squash courts, Multi-purpose hall for sports like badminton, gymnastics, etc.Swimming pool, Splash pool for kidsGymnasium, Skating rink, Sand pit and Climbing wall Pre-schoolers playground, Shooting range and archery, Athletics .
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 4 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-4.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Transport</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                     The school has its own fleet of new air-conditioned buses to ferry the children to and fro. A teacher travels in every bus and disembarks only after the last child is dropped off safely. Safety on the road is given paramount importance. The students embark and disembark within the school campus under the vigilance of transport managers and teaching staff. An escort teacher and helping staff accompany the children in the bus. All the buses are equipped with a medical kit for emergency. In case of a delay due to unforeseen circumstances, parents are immediately informed through SMS.The school transport will cover almost all areas of Ludhiana as well as the satellite towns within a range of 15 – 20 km.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 5 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-5.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Library</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      Our e-library can be accessed by students from within the school as well as from home. This enables the students to not only read their favorite titles in paperback or e-books but also to prepare presentations. Such exercises help them to improve their presentation and communication skills.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 6 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-6.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Social Science Lab</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      Social Science Laboratory has equipment, apparatus and materials required for each subject, such as maps, globe, ethnic artifacts, etc. to promote practical learning. It provides a work space for students and teachers for interactive activities such as role playing, visualization, competing/cooperating, problem solving or focussed group discussions.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 7 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-7.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Computer Lab & Language Lab  </h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      The Computer Lab is well resourced with high-speed central servers and the latest educational software (with adequate security and safety features). Every student has access to a terminal in the lab. We are also keen to teach children about personal safety in the use of social media to ensure they are fully aware of the social risks involved. Parents can access the up-to-date progress of their children in each subject via the school’s website.Our Language Laboratory is fitted with latest multimedia equipment and audio-visual aids. Students are able to practice speaking a new language, record their work and take part in interactive sessions to improve their language skills while enjoying the experience.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 8 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-8.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Mathematics Lab</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      The Maths Lab allows students to explore mathematical concepts via games, puzzles and other modern teaching aids. In addition to teaching in the lab, students are encouraged to use lab facilities on their own to inculcate in them a spi r it of discovery and inventions.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ITEM 9 -->
+              <div class="fac9-item w-full flex-shrink-0 px-4">
+                <div
+                  class="bg-white rounded-2xl shadow-lg p-6 md:flex gap-8 items-center"
+                >
+                  <img
+                    src="school-images/f-9.png"
+                    class="w-full md:w-64 h-56 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 class="font-semibold text-lg mb-2">Science & Robotics Lab</h3>
+                    <p class="text-gray-500 text-sm mb-6">
+                      The school has also built a Science and Robotics lab for students to learn the wonders of science and also train them to build and control robots. Fostering scientific thinking and reasoning, the lab helps students to move beyond the textbook and promotes learning-by-doing.
+                    </p>
+                    <button
+                      class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                    >
+                      Explore Our Academics
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   
+    </main>
+
+    <!-- Footer  -->
+
+    <footer class="w-full">
+      <!-- Top Footer Links -->
+      <div class="bg-gray-100 py-6">
+        <div class="max-w-7xl mx-auto px-4">
+          <div
+            class="flex flex-wrap justify-center gap-8 text-gray-500 text-base font-medium"
+          >
+            <a href="#" class="hover:text-black transition"> About </a>
+
+            <a href="#" class="hover:text-black transition">
+              Academic Programs
+            </a>
+
+            <a href="#" class="hover:text-black transition"> Philosophy </a>
+
+            <a href="#" class="hover:text-black transition"> Facilities </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div
+        class="bg-[#28A745] text-white text-center text-sm lg:text-base py-3 px-4"
+      >
+        <p
+          class="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3"
+        >
+          <span>
+            Copyrights © 2026 All Rights Reserved by Delhi World Public School
+          </span>
+
+          <span class="hidden md:inline">|</span>
+
+          <span> Designed and Developed by Ayatiworks </span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/mobile-toggle-script.js"></script>
+    <script src="js/academic-carousel-slides-script.js"></script>
+    <script src="js/facilities.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
