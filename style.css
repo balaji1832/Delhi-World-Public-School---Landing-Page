@@ -7,3 +7,142 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* ================= BRANCH ================= */
+
+.branch{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:20;
+pointer-events:none;
+}
+
+/* ================= PIN ================= */
+
+.pin{
+width:12px;
+height:12px;
+border-radius:50%;
+background:radial-gradient(circle at 40% 35%,#fff7a8,#e6a400);
+box-shadow:0 3px 6px rgba(0,0,0,.35);
+}
+
+/* ================= THREAD ================= */
+
+.thread{
+width:2px;
+background:linear-gradient(to bottom,#a88c5b,#e2d4a7,#a88c5b);
+}
+
+/* ================= PHOTO WRAP ================= */
+
+.photo-wrap{
+position:absolute;
+display:flex;
+flex-direction:column;
+align-items:center;
+transform-origin:top center;
+animation:sway 4s ease-in-out infinite;
+}
+
+@keyframes sway{
+0%,100%{transform:rotate(var(--r))}
+50%{transform:rotate(calc(var(--r) + 3deg))}
+}
+
+.photo-wrap:hover{
+animation-play-state:paused;
+transform:rotate(6deg);
+}
+
+/* ================= PHOTO CARD ================= */
+
+.photo-card{
+position:relative;
+border-radius:14px;
+overflow:hidden;
+border:3px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* ================= SHINE ================= */
+
+.shine{
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+115deg,
+transparent 0%,
+transparent 40%,
+rgba(255,255,255,.6) 50%,
+transparent 60%,
+transparent 100%
+);
+
+background-size:200% 100%;
+background-position:200% 0;
+transition:.6s;
+}
+
+.photo-wrap:hover .shine{
+background-position:-40% 0;
+}
+
+/* ================= ICON ================= */
+
+.icon-bg{
+position:absolute;
+bottom:-30px;
+left:50%;
+transform:translateX(-50%) scale(.6);
+opacity:0;
+transition:.4s;
+z-index:-1;
+}
+
+.photo-wrap:hover .icon-bg{
+opacity:1;
+transform:translateX(-50%) scale(1);
+}
+
+.icon-bg svg{
+width:60px;
+height:60px;
+
+filter:
+drop-shadow(0 0 10px rgba(255,200,40,.9))
+drop-shadow(0 0 25px rgba(255,150,20,.6))
+drop-shadow(0 0 40px rgba(255,120,0,.4));
+}
+
+/* ================= FALLING LEAVES ================= */
+
+.leaf{
+position:absolute;
+top:-40px;
+width:18px;
+height:18px;
+background:#4CAF50;
+border-radius:50% 0;
+transform:rotate(45deg);
+opacity:.8;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(700px) rotate(360deg);
+opacity:0;
+}
+
+}
+
+
