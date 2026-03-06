@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Overpass', sans-serif;
 }
 
-
+/* gallery styles */
 /* ================= BRANCH ================= */
 
 .branch{
@@ -145,4 +145,47 @@ opacity:0;
 
 }
 
+
+/* Facilities styles */
+
+/* Mobile / Tablet equal heights */
+@media (max-width:767px){
+.fac9-track{align-items:stretch;}
+.fac9-item{display:flex;}
+.fac9-item>div{display:flex;flex-direction:column;flex:1;}
+.fac9-item img{flex-shrink:0;}
+.fac9-item .explore-btn{margin-top:auto;}
+}
+
+/* Text clamp */
+.desc-text{
+overflow:hidden;
+max-height:4.5em;
+transition:max-height .4s ease;
+}
+
+.desc-text.expanded{
+max-height:600px;
+}
+
+/* Read more button */
+.read-more-btn{
+display:none;
+background:none;
+border:none;
+color:#2C3691;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+@media (max-width:767px){
+.read-more-btn{display:inline-block;}
+}
+
+@media (min-width:768px){
+.desc-text{max-height:none!important;}
+.read-more-btn{display:none!important;}
+}
 
