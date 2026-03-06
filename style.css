@@ -6,6 +6,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Overpass', sans-serif;
 }
 
+body{
+  overflow-x: hidden;
+}
 /* gallery styles */
 /* ================= BRANCH ================= */
 
@@ -180,11 +183,11 @@ cursor:pointer;
 margin-bottom:10px;
 }
 
-@media (max-width:767px){
+@media (max-width:1023px){
 .read-more-btn{display:inline-block;}
 }
 
-@media (min-width:768px){
+@media (min-width:1023px){
 .desc-text{max-height:none!important;}
 .read-more-btn{display:none!important;}
 }
