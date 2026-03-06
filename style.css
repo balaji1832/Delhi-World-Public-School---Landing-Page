@@ -476,13 +476,19 @@ box-shadow:0 14px 36px rgba(44,54,145,.35);
 
 
 .method-section{
-  background-image: url("school-images/bg-wave.jpg"); /* your image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
+}
+
+/* Apply background only on large screens */
+@media (min-width:1024px){
+  .method-section{
+    background-image: url("school-images/bg-wave.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .wave-bg{
