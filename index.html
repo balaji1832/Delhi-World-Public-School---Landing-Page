@@ -29,11 +29,13 @@
 
   <body class="bg-gray-100 min-h-screen">
     <!-- HEADER / NAVBAR -->
-    <header class="bg-white border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header
+      class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- LEFT: Logo -->
-          <a href="#" class="flex items-center">
+          <a href="/" class="flex items-center">
             <img
               src="school-images/Logo.svg"
               alt="Delhi World Public School"
@@ -45,15 +47,40 @@
           <nav
             class="hidden lg:flex items-center gap-10 text-gray-700 font-medium"
           >
-            <a href="#" class="relative text-black"> Home </a>
+            <a
+              href="#home"
+              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Home
+            </a>
 
-            <a href="#" class="hover:text-black"> About </a>
+            <a
+              href="#promise"
+              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              About
+            </a>
 
-            <a href="#" class="hover:text-black"> Philosophy </a>
+            <a
+              href="#philosophy"
+              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Philosophy
+            </a>
 
-            <a href="#" class="hover:text-black"> Academic Programs </a>
+            <a
+              href="#academic-programs"
+              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Academic Programs
+            </a>
 
-            <a href="#" class="hover:text-black"> Facilities </a>
+            <a
+              href="#facilities"
+              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Facilities
+            </a>
           </nav>
 
           <!-- Mobile Menu Button -->
@@ -79,25 +106,29 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden lg:hidden border-t bg-white">
+      <div id="mobileMenu" class="hidden lg:hidden border-t bg-white ">
         <nav class="flex flex-col p-4 space-y-3 text-gray-700 font-medium">
-          <a href="#" class="text-black"> Home </a>
+          <a href="#home" class="text-black hover:text-[#056839]"> Home </a>
 
-          <a href="#" class="hover:text-black"> About </a>
+          <a href="#promise" class="hover:text-[#056839]"> About </a>
 
-          <a href="#" class="hover:text-black"> Philosophy </a>
+          <a href="#philosophy" class="hover:text-black"> Philosophy </a>
 
-          <a href="#" class="hover:text-black"> Academic Programs </a>
+          <a href="#academic-programs" class="hover:text-black">
+            Academic Programs
+          </a>
 
-          <a href="#" class="hover:text-black"> Facilities </a>
+          <a href="#facilities" class="hover:text-black"> Facilities </a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Banner Content for Desktop and tablet -->
+      <!-- banners -->
+      <section id="home">
+        <!-- Banner Content for Desktop and tablet -->
       <section
-        class="relative w-full md:min-h-[500px] lg:min-h-[600px] flex items-center text-center hidden md:flex"
+        class="relative w-full md:min-h-[500px] lg:min-h-[600px] flex items-center text-center hidden md:flex "
       >
         <!-- Background Image -->
         <img
@@ -198,12 +229,14 @@
           </div>
         </div>
       </section>
-
+      </section>
+      
 
       <!-- title text -->
 
       <section
         class="w-full py-16 flex flex-col justify-center items-center bg-gray-50 px-6"
+        id="promise"
       >
         <!-- Label pill -->
         <div
@@ -502,7 +535,7 @@
       </section>
 
       <!-- Methodology -->
-      <section class="mt-14 px-4">
+      <section class="mt-14 px-4  method-section">
         <div class="max-w-4xl mx-auto text-start sm:text-left md:text-center">
           <!-- Heading -->
           <h2
@@ -557,7 +590,9 @@
         />
       </section>
 
-      <section class="py-20">
+      <!-- philosophy -->
+
+      <section class="py-20 phil-section  wave-bg " id="philosophy">
         <div class="max-w-6xl mx-auto px-6">
           <!-- Title -->
           <h2
@@ -645,7 +680,10 @@
       </section>
 
       <!-- Academice programs -->
-      <section class="w-full max-w-[1400px] mx-auto px-6 py-12">
+      <section
+        class="w-full max-w-[1400px] mx-auto px-6 py-12"
+        id="academic-programs"
+      >
         <!-- Header -->
         <div
           class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10"
@@ -824,7 +862,10 @@
 
       <!-- Facilities -->
 
-      <section class="fac9-section w-full bg-gray-50 py-20 px-6">
+      <section
+        class="fac9-section w-full bg-gray-50 py-20 px-6"
+        id="facilities"
+      >
         <div class="max-w-6xl mx-auto text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900 mb-4 fade-right">
             Facilities
@@ -1158,7 +1199,5 @@
     <script src="js/facilities.js"></script>
     <script src="js/Animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    
   </body>
 </html>
