@@ -112,24 +112,25 @@
         >
           <!-- Tag -->
           <span
-            class="inline-block bg-[#1C6D3E] px-5 py-1 rounded-full text-lg font-semibold"
+            class="inline-block bg-[#1C6D3E] px-5 py-1 rounded-full text-lg font-semibold fade-left"
           >
             Admissions Open 2026–27
           </span>
 
           <!-- Heading -->
           <h1
-            class="mt-6 text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight"
+            class="mt-6 text-xl md:text-3xl lg:text-5xl xl:text-6xl font-bold leading-tight fade-right"
           >
             Shaping
-            <span class="italic font-medium text-[#C5B4AC]">Future Leaders</span
+            <span class="italic font-medium text-[#C5B4AC] animate-up"
+              >Future Leaders</span
             ><br />
             with Excellence
           </h1>
 
           <!-- Description -->
           <p
-            class="mt-6 text-gray-200 text-lg md:text-base xl:text-xl max-w-xl md:max-w-[350px] lg:max-w-xl"
+            class="mt-6 text-gray-200 text-lg md:text-base xl:text-xl max-w-xl md:max-w-[350px] lg:max-w-xl fade-up"
           >
             A CBSE-affiliated senior secondary school committed to academic
             excellence, values, and holistic development.
@@ -139,14 +140,14 @@
           <div class="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="#"
-              class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
+              class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 animate-down py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
             >
               Apply for admission
             </a>
 
             <a
               href="#"
-              class="bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
+              class="bg-[#2C3691] hover:bg-blue-800 text-white animate-up px-6 py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
             >
               Book a Campus Visit
             </a>
@@ -163,7 +164,7 @@
           class="absolute top-6 left-0 w-full max-w-3xl mx-auto px-4 text-white text-center md:text-left"
         >
           <!-- Heading -->
-          <h1 class="text-2xl md:text-3xl font-bold leading-snug">
+          <h1 class="text-2xl md:text-3xl font-bold leading-snug fade-left">
             Shaping <span class="italic text-[#C5B4AC]">Future Leaders</span>
             <br class="hidden md:block" />
             with Excellence
@@ -171,14 +172,16 @@
 
           <!-- Description -->
           <p
-            class="mt-2 text-gray-200 text-md md:text-sm max-w-lg mx-auto md:mx-0"
+            class="mt-2 text-gray-200 text-md md:text-sm max-w-lg mx-auto md:mx-0 fade-right"
           >
             A CBSE-affiliated senior secondary school committed to academic
             excellence, values, and holistic development.
           </p>
 
           <!-- Buttons -->
-          <div class="mt-4 flex justify-center md:justify-start gap-2">
+          <div
+            class="mt-4 flex justify-center md:justify-start gap-2 animate-down"
+          >
             <a
               href="#"
               class="bg-[#2C3691] hover:bg-blue-800 px-4 py-1.5 text-xs md:px-5 md:py-2 md:text-sm rounded-full font-semibold transition"
@@ -196,11 +199,55 @@
         </div>
       </section>
 
+
+      <!-- title text -->
+
+      <section
+        class="w-full py-16 flex flex-col justify-center items-center bg-gray-50 px-6"
+      >
+        <!-- Label pill -->
+        <div
+          class="flex items-center gap-2 bg-green-50 text-[#056839] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6"
+        >
+          <span id="labelDot" class="w-2 h-2 rounded-full bg-[#056839]"></span>
+          Our Promise
+        </div>
+
+        <!-- 
+    Mobile/tablet  → wraps naturally, smaller font
+    lg+ (1024px+)  → nowrap + JS-fitted font to guarantee 1 line
+  -->
+        <h2
+          id="typeHeading"
+          class="text-gray-900 font-bold text-center w-full leading-relaxed text-xl sm:text-2xl md:text-3xl lg:whitespace-nowrap lg:text-4xl"
+          style="
+            font-family: &quot;Playfair Display&quot;, serif;
+            min-height: 1.5em;
+          "
+        >
+          <span id="typeText"></span
+          ><span
+            id="typeCursor"
+            class="inline-block w-0.5 align-middle ml-0.5 bg-[#056839] rounded-sm"
+            style="height: 0.85em"
+          ></span>
+        </h2>
+
+        <!-- Progress bar -->
+        <div class="mt-7 w-24 h-0.5 bg-green-100 rounded-full overflow-hidden">
+          <div
+            id="typeProgress"
+            class="h-full bg-[#056839] rounded-full"
+            style="width: 0%; transition: width 0.06s linear"
+          ></div>
+        </div>
+      </section>
+
       <!-- Gallery Photos for mobile and tablet -->
       <section class="w-full max-w-5xl mx-auto px-4 py-12 lg:hidden">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           <!-- Image 1 -->
-          <div class="rounded-2xl overflow-hidden shadow-md">
+          <div class="rounded-2xl overflow-hidden shadow-md fade-left">
             <img
               src="school-images/ap-1.png"
               class="w-full h-full object-cover aspect-square hover:scale-105 transition duration-500"
@@ -208,7 +255,7 @@
           </div>
 
           <!-- Image 2 -->
-          <div class="rounded-2xl overflow-hidden shadow-md">
+          <div class="rounded-2xl overflow-hidden shadow-md fade-right">
             <img
               src="school-images/ap-2.png"
               class="w-full h-full object-cover aspect-square hover:scale-105 transition duration-500"
@@ -216,7 +263,7 @@
           </div>
 
           <!-- Image 3 -->
-          <div class="rounded-2xl overflow-hidden shadow-md">
+          <div class="rounded-2xl overflow-hidden shadow-md fade-left">
             <img
               src="school-images/ap-3.png"
               class="w-full h-full object-cover aspect-square hover:scale-105 transition duration-500"
@@ -224,7 +271,7 @@
           </div>
 
           <!-- Image 4 -->
-          <div class="rounded-2xl overflow-hidden shadow-md">
+          <div class="rounded-2xl overflow-hidden shadow-md fade-right">
             <img
               src="school-images/ap-4.png"
               class="w-full h-full object-cover aspect-square hover:scale-105 transition duration-500"
@@ -232,7 +279,7 @@
           </div>
 
           <!-- Image 5 -->
-          <div class="rounded-2xl overflow-hidden shadow-md">
+          <div class="rounded-2xl overflow-hidden shadow-md fade-left">
             <img
               src="school-images/ap-5.png"
               class="w-full h-full object-cover aspect-square hover:scale-105 transition duration-500"
@@ -240,7 +287,7 @@
           </div>
 
           <!-- Image 6 -->
-          <div class="rounded-2xl overflow-hidden shadow-md">
+          <div class="rounded-2xl overflow-hidden shadow-md fade-right">
             <img
               src="school-images/ap-6.png"
               class="w-full h-full object-cover aspect-square hover:scale-105 transition duration-500"
@@ -250,7 +297,7 @@
       </section>
       <!-- Gallery Photos for desktop -->
       <section
-        class="relative w-full max-w-6xl mx-auto py-2 overflow-hidden hidden lg:block mt-5"
+        class="relative w-full max-w-6xl mx-auto py-2 overflow-hidden hidden lg:block mt-5 animate-up"
       >
         <!-- TREE BRANCH -->
 
@@ -458,12 +505,16 @@
       <section class="mt-14 px-4">
         <div class="max-w-4xl mx-auto text-start sm:text-left md:text-center">
           <!-- Heading -->
-          <h2 class="text-2xl md:text-3xl font-semibold text-gray-800">
+          <h2
+            class="text-2xl md:text-3xl font-semibold text-gray-800 fade-left"
+          >
             Methodology
           </h2>
 
           <!-- Paragraph 1 -->
-          <p class="mt-6 text-gray-600 text-sm md:text-base leading-relaxed">
+          <p
+            class="mt-6 text-gray-600 text-sm md:text-base leading-relaxed fade-right"
+          >
             The School functions towards imparting Holistic Education which will
             lead to the development of the students as responsible citizens. We
             inculcate values in them so that they efficiently discharge their
@@ -474,7 +525,9 @@
           </p>
 
           <!-- Paragraph 2 -->
-          <p class="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
+          <p
+            class="mt-4 text-gray-600 text-sm md:text-base leading-relaxed fade-left"
+          >
             Extra curriculum activities in the school inculcate zeal and
             enthusiasm in the students and also balances the physical and
             emotional growth, boosting their stamina. The sportsman spirit
@@ -487,7 +540,7 @@
           <div class="mt-8">
             <a
               href="#"
-              class="inline-block bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 text-sm md:text-base font-semibold rounded-full transition"
+              class="inline-block bg-[#2C3691] animate-down hover:bg-blue-800 text-white px-6 py-3 text-sm md:text-base font-semibold rounded-full transition"
             >
               Explore Our Academics
             </a>
@@ -496,7 +549,7 @@
       </section>
 
       <!-- School banner image -->
-      <section class="w-full overflow-hidden py-10">
+      <section class="w-full overflow-hidden py-10 fade-left">
         <img
           src="school-images/school-banner.png"
           alt="School Banner"
@@ -504,30 +557,33 @@
         />
       </section>
 
-      <!-- our core philosophy -->
       <section class="py-20">
         <div class="max-w-6xl mx-auto px-6">
-          <!-- Top Title -->
-          <h2 class="text-6xl font-bold text-gray-300 mb-5">
-            Our Core Philosophy
-          </h2>
+          <!-- Title -->
+          <h2
+            class="phil-title text-2xl sm:text-3xl md:text-6xl font-bold text-gray-300 mb-5"
+            aria-label="Our Core Philosophy"
+          ></h2>
 
-          <!-- Content -->
           <div class="flex flex-col md:flex-row items-center gap-12">
-            <!-- Left Image -->
+            <!-- Image -->
             <div class="md:w-1/2">
-              <img
-                src="school-images/philosophy.png"
-                alt="students"
-                class="w-full max-w-sm"
-              />
+              <div class="phil-img-wrap">
+                <img
+                  src="school-images/philosophy.png"
+                  alt="students"
+                  class="w-full max-w-sm"
+                />
+              </div>
             </div>
 
-            <!-- Right Content -->
+            <!-- Content -->
             <div class="md:w-1/2">
-              <h3 class="text-3xl font-semibold mb-6">School Aim</h3>
+              <h3 class="phil-heading text-3xl font-semibold mb-6">
+                School Aim
+              </h3>
 
-              <ul class="space-y-5 text-gray-700 mb-8">
+              <ul class="phil-list space-y-5 text-gray-700 mb-8">
                 <li>• Positive and value based</li>
                 <li>• Securing and caring</li>
                 <li>• Stress free and Hygienic</li>
@@ -538,7 +594,7 @@
               </ul>
 
               <button
-                class="bg-[#2C3691] text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-800 transition"
+                class="phil-btn bg-[#2C3691] text-white font-semibold px-6 py-3 rounded-full"
               >
                 Explore Our Academics
               </button>
@@ -558,8 +614,10 @@
             >
               <!-- Vision -->
               <div class="md:pr-10 pb-8 md:pb-0">
-                <h3 class="text-xl font-semibold mb-4">School Vision</h3>
-                <p class="text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold mb-4 fade-left">
+                  School Vision
+                </h3>
+                <p class="text-gray-700 leading-relaxed fade-right">
                   DWPS is committed to provide education, incorporating Indian
                   values and the Global culture, aiming to create global
                   citizens as torch bearers of the dynamic and harmonious world.
@@ -568,8 +626,10 @@
 
               <!-- Mission -->
               <div class="md:pl-10 pt-8 md:pt-0">
-                <h3 class="text-xl font-semibold mb-4">School Mission</h3>
-                <p class="text-gray-700 leading-relaxed">
+                <h3 class="text-xl font-semibold mb-4 fade-right">
+                  School Mission
+                </h3>
+                <p class="text-gray-700 leading-relaxed fade-left">
                   DWPS aim to instill in each child a sense of inquisitiveness
                   and exploration, and an urge for experimentation, observation
                   and synthesis. We endeavor to free the learning process from
@@ -591,11 +651,11 @@
           class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10"
         >
           <div class="max-w-md">
-            <h2 class="text-3xl font-bold text-gray-900 mb-3">
+            <h2 class="text-3xl font-bold text-gray-900 mb-3 fade-left">
               Academic Programs
             </h2>
 
-            <p class="text-gray-500 text-sm leading-relaxed">
+            <p class="text-gray-500 text-sm leading-relaxed animate-down">
               Our academic program is designed to nurture curiosity, critical
               thinking, and a love for lifelong learning. With experienced
               educators and a well-structured curriculum, we empower students to
@@ -604,7 +664,7 @@
           </div>
 
           <!-- Buttons -->
-          <div class="flex gap-3 justify-end mt-2 lg:mt-10">
+          <div class="flex gap-3 justify-end mt-2 fade-right lg:mt-10">
             <button
               onclick="slide(-1)"
               class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-green-600 hover:bg-green-50 transition"
@@ -646,7 +706,7 @@
         </div>
 
         <!-- Carousel -->
-        <div class="overflow-hidden">
+        <div class="overflow-hidden animate-up">
           <div
             id="track"
             class="flex gap-6 transition-transform duration-500 ease-out"
@@ -766,9 +826,11 @@
 
       <section class="fac9-section w-full bg-gray-50 py-20 px-6">
         <div class="max-w-6xl mx-auto text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Facilities</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4 fade-right">
+            Facilities
+          </h2>
 
-          <p class="text-gray-500 max-w-2xl mx-auto text-sm">
+          <p class="text-gray-500 max-w-2xl mx-auto text-sm fade-left">
             Our campus offers modern facilities designed to support holistic
             learning and student development. From well-equipped classrooms and
             laboratories to sports and activity spaces, every facility ensures a
@@ -790,7 +852,7 @@
             ❯
           </button>
 
-          <div class="fac9-slider overflow-hidden">
+          <div class="fac9-slider overflow-hidden animate-down">
             <div class="fac9-track flex transition-transform mb-4 duration-500">
               <!-- ITEM 1 -->
               <div class="fac9-item w-full flex-shrink-0 px-4">
@@ -1094,6 +1156,9 @@
     <script src="js/mobile-toggle-script.js"></script>
     <script src="js/academic-carousel-slides-script.js"></script>
     <script src="js/facilities.js"></script>
+    <script src="js/Animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
   </body>
 </html>

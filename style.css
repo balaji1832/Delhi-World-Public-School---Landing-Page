@@ -189,3 +189,279 @@ margin-bottom:10px;
 .read-more-btn{display:none!important;}
 }
 
+/* Animation css */
+
+.fade-up,
+.fade-down,
+.fade-left,
+.fade-right,
+.fade-in,
+.animate-down,
+.animate-up {
+  opacity: 0;
+
+  transition:
+    opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 2.1s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform, opacity;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+}
+
+
+/* Directions */
+
+.fade-up    { transform: translateY(40px); }
+.fade-down  { transform: translateY(-40px); }
+.fade-left  { transform: translateX(-40px); }
+.fade-right { transform: translateX(40px); }
+.fade-in    { transform: scale(0.94); }
+
+
+/* Visible state */
+
+.show {
+  opacity: 1;
+  transform: translate3d(0,0,0) scale(1);
+}
+
+
+/* Keyframe cinematic versions */
+
+.animate-down,
+.animate-up {
+  transition: none;
+}
+
+
+/* Top → Down */
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Bottom → Up */
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.show.animate-down {
+  animation: slideDownFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.show.animate-up {
+  animation: slideUpFade 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* TITLE LETTER ANIMATION */
+
+.phil-title .char{
+display:inline-block;
+opacity:0;
+transform:translateY(70%) rotateX(-90deg);
+transform-origin:bottom center;
+
+transition:
+opacity 1.2s cubic-bezier(.22,1,.36,1),
+transform 1.4s cubic-bezier(.22,1,.36,1);
+}
+
+.phil-title .space{
+display:inline-block;
+width:.3em;
+}
+
+.phil-title.in-view .char{
+opacity:1;
+transform:translateY(0) rotateX(0);
+}
+
+
+
+/* IMAGE */
+
+.phil-img-wrap{
+position:relative;
+display:inline-block;
+
+opacity:0;
+transform:translateX(-70px) scale(.95);
+
+transition:
+opacity 1.8s cubic-bezier(.22,1,.36,1),
+transform 1.8s cubic-bezier(.22,1,.36,1);
+}
+
+.phil-img-wrap.in-view{
+opacity:1;
+transform:translateX(0) scale(1);
+}
+
+
+
+/* FRAME */
+
+.phil-img-wrap::before{
+content:'';
+position:absolute;
+inset:0;
+
+border-radius:1rem;
+
+transform:translate(16px,16px);
+
+opacity:0;
+
+transition:
+opacity 1.1s ease,
+transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+.phil-img-wrap.in-view::before{
+opacity:1;
+}
+
+.phil-img-wrap:hover::before{
+transform:translate(8px,8px);
+}
+
+
+
+/* IMAGE STYLE */
+
+.phil-img-wrap img{
+position:relative;
+z-index:1;
+
+border-radius:1rem;
+
+transition:
+transform 1.2s cubic-bezier(.22,1,.36,1),
+filter .8s ease;
+
+filter:saturate(.85);
+}
+
+.phil-img-wrap:hover img{
+transform:scale(1.05);
+filter:saturate(1);
+}
+
+
+
+/* HEADING */
+
+.phil-heading{
+opacity:0;
+transform:translateY(40px);
+
+transition:
+opacity 1.2s cubic-bezier(.22,1,.36,1) .3s,
+transform 1.2s cubic-bezier(.22,1,.36,1) .3s;
+}
+
+.phil-heading.in-view{
+opacity:1;
+transform:translateY(0);
+}
+
+
+
+/* HEADING UNDERLINE */
+
+.phil-heading::after{
+content:'';
+display:block;
+
+width:0;
+height:3px;
+
+background:linear-gradient(90deg,#2C3691,#6675e0);
+
+margin-top:12px;
+
+transition:
+width 1.2s cubic-bezier(.22,1,.36,1) .8s;
+}
+
+.phil-heading.in-view::after{
+width:70px;
+}
+
+
+
+/* LIST */
+
+.phil-list li{
+opacity:0;
+transform:translateX(40px);
+
+transition:
+opacity .9s cubic-bezier(.22,1,.36,1),
+transform .9s cubic-bezier(.22,1,.36,1),
+background .25s ease;
+
+border-radius:8px;
+padding:6px 10px;
+margin-left:-10px;
+}
+
+.phil-list li.in-view{
+opacity:1;
+transform:translateX(0);
+}
+
+.phil-list li:hover{
+background:rgba(44,54,145,.06);
+}
+
+
+
+/* BUTTON */
+
+.phil-btn{
+opacity:0;
+transform:translateY(30px);
+
+transition:
+opacity 1s cubic-bezier(.22,1,.36,1),
+transform 1s cubic-bezier(.22,1,.36,1),
+box-shadow .4s ease;
+
+position:relative;
+overflow:hidden;
+}
+
+.phil-btn.in-view{
+opacity:1;
+transform:translateY(0);
+}
+
+.phil-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 36px rgba(44,54,145,.35);
+}
+
+
+
+/* text animation */
+
+
