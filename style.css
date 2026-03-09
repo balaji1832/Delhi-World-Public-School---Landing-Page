@@ -481,18 +481,10 @@ box-shadow:0 14px 36px rgba(44,54,145,.35);
   position: relative;
 }
 
-/* Apply background only on large screens */
-@media (min-width:1024px){
-  .method-section{
-    background-image: url("school-images/bg-wave.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
 
-.wave-bg{
-    background-image: url("school-images/wave-2.jpg"); /* your image path */
+
+/* .wave-bg{
+    background-image: url("school-images/wave-2.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -500,4 +492,4 @@ box-shadow:0 14px 36px rgba(44,54,145,.35);
   padding-bottom: 80px;
   position: relative;
 
-}
+} */
