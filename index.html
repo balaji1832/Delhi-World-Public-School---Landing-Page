@@ -21,6 +21,8 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -178,7 +180,8 @@
               </a>
 
               <a
-                href="#" onclick="openModal()"
+                href="#"
+                onclick="openModal()"
                 class="bg-[#2C3691] hover:bg-blue-800 text-white animate-up px-6 py-3 text-base md:px-4 md:py-2 md:text-sm lg:px-6 lg:py-3 lg:text-base rounded-full font-semibold transition text-center"
               >
                 Book a Campus Visit
@@ -217,14 +220,16 @@
               class="mt-4 flex justify-center md:justify-start gap-2 animate-down"
             >
               <a
-                href="#" onclick="openModal()"
+                href="#"
+                onclick="openModal()"
                 class="bg-[#2C3691] hover:bg-blue-800 px-4 py-1.5 text-xs md:px-5 md:py-2 md:text-sm rounded-full font-semibold transition"
               >
                 Apply for admission
               </a>
 
               <a
-                href="#" onclick="openModal()"
+                href="#"
+                onclick="openModal()"
                 class="bg-gray-200 text-[#2C3691] hover:bg-gray-300 px-4 py-1.5 text-xs md:px-5 md:py-2 md:text-sm rounded-full font-semibold transition"
               >
                 Book a Campus Visit
@@ -603,7 +608,8 @@
               <!-- button -->
               <div class="mt-10">
                 <a
-                  href="#" onclick="openModal()"
+                  href="#"
+                  onclick="openModal()"
                   class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-7 py-3.5 rounded-full text-sm md:text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300"
                 >
                   Explore Our Academics
@@ -619,25 +625,248 @@
         </div>
       </section>
 
-      <!-- School banner image -->
-      <section id="bannerSection" class="relative w-full overflow-hidden py-10">
-        <!-- Banner -->
-        <img
-          src="school-images/school-banner.png"
-          alt="School Banner"
-          class="w-full h-auto md:h-[70vh] lg:h-[80vh] object-cover"
-        />
-
-        <!-- Logo overlay -->
+      <!-- Founder Message Section -->
+      <section
+        class="vels-founder-shell relative overflow-hidden bg-gradient-to-br from-[#f8fbff] via-white to-[#eef6ff] py-14 md:py-20 lg:py-24"
+      >
+        <!-- decorative blobs -->
         <div
-          id="bannerLogo"
-          class="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-[3000ms] ease-out"
-        >
-          <img
-            src="school-images/logo-big.svg"
-            class="w-28 md:w-36 lg:w-64"
-            alt="Logo"
-          />
+          class="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-blue-100/50 blur-3xl"
+        ></div>
+        <div
+          class="pointer-events-none absolute top-1/3 -right-20 h-72 w-72 rounded-full bg-sky-100/50 blur-3xl"
+        ></div>
+        <div
+          class="pointer-events-none absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-indigo-100/40 blur-3xl"
+        ></div>
+
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid items-start gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12 xl:gap-16"
+          >
+            <!-- LEFT SIDE -->
+            <div class="vels-founder-media-wrap fade-left">
+              <div class="rounded-[24px] b p-2 sm:p-3">
+                <!-- keep your section structure -->
+                <section
+                  id="bannerSection"
+                  class="relative w-full overflow-hidden rounded-[20px] py-0"
+                >
+                  <img
+                    src="school-images/school-banner.png"
+                    alt="School Banner"
+                    class="w-full h-[280px] sm:h-[380px] md:h-[520px] lg:h-[5500px] xl:h-[620px] object-cover rounded-[20px]"
+                  />
+
+                  <div
+                    id="bannerLogo"
+                    class="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-[3000ms] ease-out"
+                  >
+                    <img
+                      src="school-images/logo-big.svg"
+                      class="w-24 sm:w-28 md:w-36 lg:w-48 xl:w-56 drop-shadow-[0_12px_30px_rgba(0,0,0,0.28)]"
+                      alt="Logo"
+                    />
+                  </div>
+
+                  <!-- subtle gradient for depth -->
+                  <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-white/5"
+                  ></div>
+                </section>
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="vels-founder-copy-wrap lg:sticky lg:top-24">
+              <div
+                class="rounded-[28px] border border-white/70 bg-white/80 p-5 sm:p-7 md:p-8 lg:p-9 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-xl"
+              >
+                <!-- top label -->
+                <div class="flex flex-wrap items-center gap-3">
+                  <span
+                    class="inline-flex fade-left items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs sm:text-sm font-semibold tracking-[0.04em] text-blue-700 shadow-sm"
+                  >
+                    Founder’s Message
+                  </span>
+                </div>
+
+                <!-- heading -->
+                <h2
+                  class="mt-4 fade-right text-3xl sm:text-4xl lg:text-[52px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900"
+                >
+                  Leading with Passion!
+                </h2>
+
+                <div
+                  class="mt-4 fade-left h-1.5 w-20 rounded-full bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-400"
+                ></div>
+
+                <!-- always visible text -->
+                <div class="mt-7 space-y-5">
+                  <p
+                    class="text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8 md:text-[17px] fade-left"
+                  >
+                    It gives me great pleasure to welcome you to
+                    <strong class="font-semibold text-slate-900">
+                      Vels Global</strong
+                    >, a beacon of excellence in education for over three
+                    decades. As the chairman, I am immensely proud of the
+                    journey we have undertaken and the milestones we have
+                    achieved in shaping young minds.
+                  </p>
+
+                  <p
+                    class="text-[15px] leading-7 text-slate-600 sm:text-base sm:leading-8 md:text-[17px] fade-right"
+                  >
+                    Vels Global was founded not merely as an educational
+                    institution, but a nurturing space where students embark on
+                    a transformative journey of discovery and empowerment.
+                  </p>
+                </div>
+
+                <!-- collapsed fade -->
+                <div
+                  id="velsFounderFadeMask"
+                  class="vels-founder-fade-mask pointer-events-none mt-2 h-16 bg-gradient-to-b from-transparent to-white transition-all duration-500"
+                ></div>
+
+                <!-- expandable area -->
+                <div
+                  id="velsFounderExpandPanel"
+                  class="vels-founder-expand-panel grid overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                  style="grid-template-rows: 0fr; opacity: 0"
+                >
+                  <div class="min-h-0 overflow-hidden">
+                    <div class="space-y-5 pt-1">
+                      <p
+                        class="text-[15px] leading-7 text-slate-600 sm:text-base fade-right sm:leading-8 md:text-[17px]"
+                      >
+                        We are committed to providing a holistic educational
+                        experience that remains steadfast with a focus on
+                        immersive learning.
+                      </p>
+
+                      <p
+                        class="text-[15px] leading-7 text-slate-600 sm:text-base fade-left sm:leading-8 md:text-[17px]"
+                      >
+                        I assure you that your decision of choosing Vels will
+                        help your child receive an education that goes beyond
+                        textbooks. Together we can create an environment where
+                        curiosity is celebrated, challenges are viewed as
+                        opportunities and every achievement, no matter how
+                        small, is recognised.
+                      </p>
+
+                      <p
+                        class="text-[15px] leading-7 text-slate-600 fade-left sm:text-base sm:leading-8 md:text-[17px]"
+                      >
+                        I invite you to join us in embracing the values that
+                        define Vels: innovation, inclusivity and a commitment to
+                        lifelong learning. Thank you for considering Vels Global
+                        for your child’s educational journey. Let’s create a
+                        future with endless possibilities.
+                      </p>
+
+                      <!-- Quote card -->
+                      <div
+                        class="relative mt-7 overflow-hidden rounded-[24px] border border-blue-100 bg-gradient-to-br from-blue-50/80 to-white p-5 sm:p-6 shadow-[0_12px_30px_rgba(59,130,246,0.10)]"
+                      >
+                        <div
+                          class="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-blue-100/60 blur-2xl"
+                        ></div>
+                        <div class="relative">
+                          <div
+                            class="mb-2 text-4xl sm:text-5xl leading-none text-blue-200"
+                          >
+                            “
+                          </div>
+                          <p
+                            class="text-base italic leading-7 fade-left text-slate-700 sm:text-lg sm:leading-8"
+                          >
+                            Sky is the limit. Together let us achieve more. My
+                            best wishes to all our students, staff and parents.
+                          </p>
+                          <div
+                            class="mb-2 text-4xl text-right sm:text-5xl leading-none text-blue-200"
+                          >
+                            ”
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- author card -->
+                      <div
+                        class="mt-7 rounded-[24px] animate-up border border-slate-200 bg-white p-5 sm:p-6 shadow-[0_12px_30px_rgba(15,23,42,0.06)]"
+                      >
+                        <div class="flex items-start gap-4">
+                          <div
+                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 text-base font-bold text-white shadow-md sm:h-14 sm:w-14 sm:text-lg"
+                          >
+                            DG
+                          </div>
+
+                          <div class="min-w-0">
+                            <h4
+                              class="text-lg font-bold text-slate-900 sm:text-xl md:text-2xl"
+                            >
+                              Dr. Ishari K. Ganesh
+                            </h4>
+
+                            <p
+                              class="mt-2 text-sm font-medium text-blue-700 sm:text-base"
+                            >
+                              M.Com., MBA, M.L., M.Phil., Ph.D.
+                            </p>
+
+                            <div
+                              class="mt-4 space-y-3 text-sm leading-6 text-slate-600 sm:text-[15px] sm:leading-7"
+                            >
+                              <p>
+                                <span class="font-semibold text-slate-900"
+                                  >Founder and Chancellor</span
+                                ><br />
+                                Vels Institute of Science and Technology and
+                                Advanced Studies – (VISTAS)
+                              </p>
+
+                              <p>
+                                <span class="font-semibold text-slate-900"
+                                  >Chairman</span
+                                ><br />
+                                Vels Group of Institutions (India, Singapore and
+                                United Kingdom)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- button -->
+                <div class="mt-7 animate-up">
+                  <button
+                    id="velsFounderActionBtn"
+                    type="button"
+                    class="vels-founder-action-btn inline-flex items-center gap-3 rounded-full border border-blue-600 bg-white px-5 py-3 text-sm font-semibold text-blue-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600 hover:text-white hover:shadow-lg sm:px-6 sm:text-base"
+                    onclick="toggleVelsFounderPanel()"
+                    aria-expanded="false"
+                    aria-controls="velsFounderExpandPanel"
+                  >
+                    <span id="velsFounderActionText">Read More</span>
+                    <span
+                      id="velsFounderActionIcon"
+                      class="inline-block transition-transform duration-500"
+                    >
+                      ↓
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -763,7 +992,8 @@
                 </ul>
 
                 <button
-                  class="phil-btn inline-flex items-center justify-center rounded-full bg-[#2E368C] px-7 py-3.5 text-white font-semibold shadow-[0_14px_35px_rgba(0,0,0,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-zinc-800 hover:shadow-[0_20px_45px_rgba(0,0,0,0.32)]" onclick="openModal()"
+                  class="phil-btn inline-flex items-center justify-center rounded-full bg-[#2E368C] px-7 py-3.5 text-white font-semibold shadow-[0_14px_35px_rgba(0,0,0,0.25)] transition duration-300 hover:-translate-y-1 hover:bg-zinc-800 hover:shadow-[0_20px_45px_rgba(0,0,0,0.32)]"
+                  onclick="openModal()"
                 >
                   Explore Our Academics
                 </button>
@@ -773,15 +1003,20 @@
         </div>
       </section>
 
-      <!-- vision and mission -->
-      <section
-        class="py-16 bg-gradient-to-br from-[#f8fbf7] via-[#f4faf6] to-[#eef7f0]"
-      >
-        <div class="max-w-6xl mx-auto px-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Vision -->
+      <!-- vision mission philosophy carousel section -->
+<section
+  class="vels-vmp-shell py-16 bg-gradient-to-br from-[#f8fbf7] via-[#f4faf6] to-[#eef7f0]"
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Header optional controls -->
+    <div class="vels-vmp-carousel-wrap relative">
+      <div class="swiper vels-vmp-swiper !pb-14">
+        <div class="swiper-wrapper">
+
+          <!-- Vision -->
+          <div class="swiper-slide h-auto">
             <div
-              class="group relative rounded-3xl p-10 overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:rotate-1 bg-gradient-to-br from-white via-[#fbfdf8] to-[#f1f8ee] border border-lime-200/70 shadow-[0_20px_60px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,0.95)] hover:shadow-[0_35px_80px_rgba(132,204,22,0.10),0_18px_32px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,1)]"
+              class="group relative rounded-3xl p-10 overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:rotate-1 bg-gradient-to-br from-white via-[#fbfdf8] to-[#f1f8ee] border border-lime-200/70 shadow-[0_20px_60px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,0.95)] hover:shadow-[0_35px_80px_rgba(132,204,22,0.10),0_18px_32px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,1)] h-full"
             >
               <div
                 class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-lime-400/50 to-transparent"
@@ -847,16 +1082,53 @@
                 class="w-full h-px bg-gradient-to-r from-lime-300/70 to-transparent mb-6"
               ></div>
 
-              <p
-                class="text-slate-600 leading-relaxed text-sm md:text-sm lg:text-base"
+              <div
+                class="text-slate-600 leading-relaxed text-sm md:text-sm lg:text-base space-y-4"
               >
-                DWPS is committed to provide education, incorporating
-                <span class="text-slate-800 font-medium">Indian values</span>
-                and the
-                <span class="text-slate-800 font-medium">Global culture</span>,
-                aiming to create global citizens as torch bearers of the dynamic
-                and harmonious world.
-              </p>
+                <p>
+                  To become a
+                  <span class="text-slate-800 font-medium"
+                    >leading educational institution</span
+                  >
+                  that inspires students to become:
+                </p>
+
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="mt-2 h-2 w-2 rounded-full bg-lime-500 shrink-0"
+                    ></span>
+                    <span class="text-slate-800 font-bold">
+                      Innovative thinkers
+                    </span>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="mt-2 h-2 w-2 rounded-full bg-lime-500 shrink-0"
+                    ></span>
+                    <span class="text-slate-800 font-bold">
+                      Compassionate leaders
+                    </span>
+                  </li>
+
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="mt-2 h-2 w-2 rounded-full bg-lime-500 shrink-0"
+                    ></span>
+                    <span class="text-slate-800 font-bold">
+                      Responsible global citizens
+                    </span>
+                  </li>
+                </ul>
+
+                <p>
+                  equipped with the knowledge and values to
+                  <span class="text-slate-800 font-medium"
+                    >shape a better future</span
+                  >.
+                </p>
+              </div>
 
               <div
                 class="absolute bottom-5 right-5 w-5 h-5 border-r border-b border-lime-300/40 rounded-br-lg"
@@ -865,10 +1137,12 @@
                 class="absolute bottom-0 right-0 w-24 h-24 rounded-tl-full bg-gradient-to-tl from-lime-200/40 to-transparent"
               ></div>
             </div>
+          </div>
 
-            <!-- Mission -->
+          <!-- Mission -->
+          <div class="swiper-slide h-auto">
             <div
-              class="group relative rounded-3xl p-10 overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:-rotate-1 bg-gradient-to-br from-white via-[#fbfdf8] to-[#f1f8ee] border border-lime-200/70 shadow-[0_20px_60px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,0.95)] hover:shadow-[0_35px_80px_rgba(132,204,22,0.10),0_18px_32px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,1)]"
+              class="group relative rounded-3xl p-10 overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:-rotate-1 bg-gradient-to-br from-white via-[#fbfdf8] to-[#f1f8ee] border border-lime-200/70 shadow-[0_20px_60px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,0.95)] hover:shadow-[0_35px_80px_rgba(132,204,22,0.10),0_18px_32px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,1)] h-full"
             >
               <div
                 class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-lime-400/50 to-transparent"
@@ -929,32 +1203,57 @@
                 class="w-full h-px bg-gradient-to-r from-lime-300/70 to-transparent mb-6"
               ></div>
 
-              <p
-                class="text-slate-600 leading-relaxed text-sm md:text-sm lg:text-base"
+              <div
+                class="space-y-4 text-slate-700 leading-relaxed text-sm md:text-base"
               >
-                DWPS aim to instill in each child a sense of
-                <span class="text-slate-800 font-medium"
-                  >inquisitiveness and exploration</span
-                >, and an urge for experimentation, observation and synthesis.
-                We endeavor to free the learning process from the confines of
-                the four walls of the classroom and take it further to activity
-                workshops, resources centers, laboratories and libraries,
-                following the maxim of
-                <span class="text-slate-800 font-medium"
-                  >teaching less learning more</span
-                >. Every child is encouraged to inculcate the values of
-                citizenry, a commitment to
-                <span class="text-slate-800 font-medium"
-                  >good health, high values</span
-                >
-                and sensitivity to the environment. We strive to guide and
-                support each child in his/her journey from
-                <span class="text-slate-800 font-medium"
-                  >primary to senior school</span
-                >
-                and prepare each one for the journey beyond school.
-              </p>
+                <p class="font-medium text-slate-800">
+                  At VELS Global School, we are committed to:
+                </p>
 
+                <ul
+                  class="list-disc pl-6 space-y-4 marker:text-lime-500 marker:text-2xl"
+                >
+                  <li>
+                    Delivering <strong>high-quality education</strong> that
+                    promotes academic excellence and lifelong learning.
+                  </li>
+
+                  <li>
+                    Creating a
+                    <strong>student-centered learning environment</strong> that
+                    encourages curiosity, creativity, and critical thinking.
+                  </li>
+
+                  <li>
+                    Integrating
+                    <strong>technology and global perspectives</strong> to
+                    prepare students for the challenges of the 21st century.
+                  </li>
+
+                  <li>
+                    Promoting <strong>holistic development</strong> through
+                    sports, arts, cultural activities, and leadership
+                    opportunities.
+                  </li>
+
+                  <li>
+                    Instilling
+                    <strong
+                      >strong moral values, discipline, and social
+                      responsibility</strong
+                    >
+                    in every learner.
+                  </li>
+
+                  <li>
+                    Building a
+                    <strong
+                      >safe, inclusive, and nurturing school community</strong
+                    >
+                    where every child feels respected and empowered.
+                  </li>
+                </ul>
+              </div>
               <div
                 class="absolute bottom-5 right-5 w-5 h-5 border-r border-b border-lime-300/40 rounded-br-lg"
               ></div>
@@ -963,8 +1262,261 @@
               ></div>
             </div>
           </div>
+
+          <!-- Educational Philosophy -->
+          <div class="swiper-slide h-auto">
+            <div
+              class="group relative rounded-3xl p-10 overflow-hidden cursor-default transition-all duration-500 hover:-translate-y-2 hover:-rotate-1 bg-gradient-to-br from-white via-[#fbfdf8] to-[#f1f8ee] border border-lime-200/70 shadow-[0_20px_60px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,0.95)] hover:shadow-[0_35px_80px_rgba(132,204,22,0.10),0_18px_32px_rgba(16,24,40,0.08),inset_0_1px_0_rgba(255,255,255,1)] h-full"
+            >
+              <!-- decorative -->
+              <div
+                class="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-lime-400/50 to-transparent"
+              ></div>
+
+              <div
+                class="absolute -top-10 -right-10 w-52 h-52 rounded-full bg-lime-200/40 blur-3xl transition-all duration-700 group-hover:bg-lime-300/45 group-hover:scale-125 pointer-events-none"
+              ></div>
+
+              <div
+                class="absolute top-4 right-6 text-[100px] leading-none text-lime-950/[0.04] select-none pointer-events-none"
+                style="font-family: Georgia, serif"
+              >
+                03
+              </div>
+
+              <!-- Icon -->
+              <div class="relative mb-7 w-12 h-12">
+                <div
+                  class="absolute inset-0 rounded-2xl bg-lime-300/40 blur-xl transition-all duration-500 group-hover:blur-2xl group-hover:bg-lime-300/50"
+                ></div>
+
+                <div
+                  class="relative w-12 h-12 rounded-2xl flex items-center justify-center bg-gradient-to-br from-lime-100 to-lime-50 border border-lime-200 shadow-[0_8px_24px_rgba(132,204,22,0.12)]"
+                >
+                  <!-- NEW PHILOSOPHY ICON -->
+                  <svg
+                    class="w-5 h-5 text-lime-600"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12c.6.5 1 1.2 1 2h6c0-.8.4-1.5 1-2A7 7 0 0012 2z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- label -->
+              <div class="flex items-center gap-3 mb-2">
+                <div
+                  class="h-px w-6 bg-gradient-to-r from-lime-500 to-transparent transition-all duration-500 group-hover:w-14"
+                ></div>
+
+                <span
+                  class="text-[10px] lg:text-[13px] tracking-[0.16em] uppercase text-lime-700/70 font-semibold"
+                >
+                  School Philosophy
+                </span>
+              </div>
+
+              <!-- title -->
+              <h3
+                class="text-3xl font-light text-slate-800 mb-2"
+                style="font-family: Georgia, serif"
+              >
+                Inspired <em class="text-lime-600 not-italic">Learning</em>
+              </h3>
+
+              <div
+                class="w-full h-px bg-gradient-to-r from-lime-300/70 to-transparent mb-6"
+              ></div>
+
+              <!-- content -->
+              <div
+                class="space-y-5 text-slate-600 leading-relaxed text-sm md:text-base"
+              >
+                <p>
+                  At <strong class="text-slate-800">VELS Global School</strong>,
+                  we believe that education should ignite curiosity, inspire
+                  creativity, and cultivate character.
+                </p>
+
+                <p class="font-medium text-slate-800">
+                  Our philosophy is guided by the following principles:
+                </p>
+
+                <ul class="space-y-4">
+                  <li>
+                    <strong class="text-slate-800">Holistic Development</strong
+                    ><br />
+                    We focus on the balanced growth of the mind, body, and
+                    spirit through academics, sports, arts, and co-curricular
+                    activities.
+                  </li>
+
+                  <li>
+                    <strong class="text-slate-800">Experiential Learning</strong
+                    ><br />
+                    Students learn best by doing. We emphasize hands-on
+                    experiences, project-based learning, and real-world
+                    applications of knowledge.
+                  </li>
+
+                  <li>
+                    <strong class="text-slate-800">Individual Potential</strong
+                    ><br />
+                    Every child is unique. Our educators guide students to
+                    discover their strengths, nurture their talents, and achieve
+                    their personal best.
+                  </li>
+
+                  <li>
+                    <strong class="text-slate-800">Global Outlook</strong><br />
+                    In an interconnected world, we encourage students to think
+                    globally while remaining rooted in strong cultural and
+                    ethical values.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- corner decor -->
+              <div
+                class="absolute bottom-5 right-5 w-5 h-5 border-r border-b border-lime-300/40 rounded-br-lg"
+              ></div>
+
+              <div
+                class="absolute bottom-0 right-0 w-24 h-24 rounded-tl-full bg-gradient-to-tl from-lime-200/40 to-transparent"
+              ></div>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <!-- Navigation -->
+        <div class="vels-vmp-nav mt-8 flex items-center justify-between gap-4">
+          <button
+            class="vels-vmp-prev inline-flex h-12 w-12 items-center justify-center rounded-full border border-lime-300 bg-white/80 text-lime-700 shadow-sm transition hover:bg-lime-50"
+            type="button"
+            aria-label="Previous card"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <div class="vels-vmp-pagination !w-auto"></div>
+
+          <button
+            class="vels-vmp-next inline-flex h-12 w-12 items-center justify-center rounded-full border border-lime-300 bg-white/80 text-lime-700 shadow-sm transition hover:bg-lime-50"
+            type="button"
+            aria-label="Next card"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .vels-vmp-shell .vels-vmp-swiper {
+    overflow: visible;
+  }
+
+  .vels-vmp-shell .swiper-slide {
+    height: auto;
+  }
+
+  .vels-vmp-shell .vels-vmp-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .vels-vmp-shell .vels-vmp-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(132, 204, 22, 0.28);
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  .vels-vmp-shell .vels-vmp-pagination .swiper-pagination-bullet-active {
+    width: 28px;
+    border-radius: 999px;
+    background: #84cc16;
+  }
+
+  .vels-vmp-shell .vels-vmp-prev.swiper-button-disabled,
+  .vels-vmp-shell .vels-vmp-next.swiper-button-disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 767px) {
+    .vels-vmp-shell .vels-vmp-nav {
+      margin-top: 1.5rem;
+    }
+  }
+</style>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".vels-vmp-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      speed: 800,
+      grabCursor: true,
+      loop: false,
+      autoHeight: false,
+
+      pagination: {
+        el: ".vels-vmp-pagination",
+        clickable: true,
+      },
+
+      navigation: {
+        nextEl: ".vels-vmp-next",
+        prevEl: ".vels-vmp-prev",
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 28,
+        },
+      },
+    });
+  });
+</script>
 
       <!-- Academice programs -->
       <section
@@ -991,7 +1543,7 @@
           <!-- Buttons -->
           <div class="flex gap-3 justify-end mt-2 fade-right lg:mt-10">
             <button
-              onclick="slide(-1)" 
+              onclick="slide(-1)"
               class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-green-600 hover:bg-green-50 transition"
             >
               <svg
@@ -1122,7 +1674,7 @@
               <p
                 class="absolute bottom-5 left-5 text-white font-bold text-xs tracking-widest uppercase"
               >
-                Senoir Secondary
+                Senior Secondary
               </p>
             </div>
 
@@ -1216,7 +1768,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1252,7 +1805,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1283,7 +1837,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1319,7 +1874,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1348,7 +1904,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1380,7 +1937,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1418,7 +1976,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1446,7 +2005,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1476,7 +2036,8 @@
                     </p>
                     <button class="read-more-btn">Read More ▼</button>
                     <button
-                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm" onclick="openModal()"
+                      class="explore-btn bg-[#2C3691] hover:bg-blue-800 text-white px-6 py-3 rounded-full text-sm"
+                      onclick="openModal()"
                     >
                       Explore Our Academics
                     </button>
@@ -1537,104 +2098,107 @@
     <script src="js/academic-carousel-slides-script.js"></script>
     <script src="js/facilities.js"></script>
     <script src="js/Animation.js"></script>
+    <script src="js/founder-message-script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Modal -->
     <div
-  id="admissionModal"
-  class="fixed inset-0 z-50 hidden bg-black/50 px-4 py-6 sm:px-6 flex items-center justify-center overflow-y-auto"
->
-  <div
-    class="relative w-full max-w-md sm:max-w-lg rounded-2xl bg-white p-5 sm:p-6 md:p-8 shadow-xl"
-  >
-    <!-- Close Button -->
-    <button
-      onclick="closeModal()"
-      class="absolute right-3 top-3 sm:right-4 sm:top-4 text-gray-500 text-lg sm:text-xl hover:text-black"
-      aria-label="Close modal"
+      id="admissionModal"
+      class="fixed inset-0 z-50 hidden bg-black/50 px-4 py-6 sm:px-6 flex items-center justify-center overflow-y-auto"
     >
-      ✕
-    </button>
+      <div
+        class="relative w-full max-w-md sm:max-w-lg rounded-2xl bg-white p-5 sm:p-6 md:p-8 shadow-xl"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeModal()"
+          class="absolute right-3 top-3 sm:right-4 sm:top-4 text-gray-500 text-lg sm:text-xl hover:text-black"
+          aria-label="Close modal"
+        >
+          ✕
+        </button>
 
-    <!-- Logo -->
-    <div class="flex justify-center mb-4">
-      <img
-        src="school-images/Logo.svg"
-        class="w-[200px] sm:w-30 md:w-50 h-auto"
-        alt="Logo"
-      />
-    </div>
+        <!-- Logo -->
+        <div class="flex justify-center mb-4">
+          <img
+            src="school-images/Logo.svg"
+            class="w-[200px] sm:w-30 md:w-50 h-auto"
+            alt="Logo"
+          />
+        </div>
 
-    <!-- Title -->
-    <h2 class="text-center text-lg sm:text-xl font-semibold text-[#2C3691] mb-5 sm:mb-6">
-      Enquiry Form
-    </h2>
+        <!-- Title -->
+        <h2
+          class="text-center text-lg sm:text-xl font-semibold text-[#2C3691] mb-5 sm:mb-6"
+        >
+          Enquiry Form
+        </h2>
 
-    <!-- Form -->
-    <form action="enquiry.php" method="POST" class="space-y-4">
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        required
-        class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
-      />
+        <!-- Form -->
+        <form action="enquiry.php" method="POST" class="space-y-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
+          />
 
-      <input
-        type="tel"
-        name="mobile"
-        placeholder="Mobile Number"
-        required
-        class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
-      />
+          <input
+            type="tel"
+            name="mobile"
+            placeholder="Mobile Number"
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
+          />
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        required
-        class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
-      />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
+          />
 
-      <!-- CAPTCHA -->
-      <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-        <input
-          type="text"
-          name="captcha_input"
-          placeholder="Enter Your Captcha"
-          required
-          autocomplete="off"
-          class="w-full sm:flex-1 h-12 border border-gray-300 rounded-lg px-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
-        />
+          <!-- CAPTCHA -->
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+            <input
+              type="text"
+              name="captcha_input"
+              placeholder="Enter Your Captcha"
+              required
+              autocomplete="off"
+              class="w-full sm:flex-1 h-12 border border-gray-300 rounded-lg px-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#2C3691]"
+            />
 
-        <div class="flex items-center gap-3 w-full sm:w-auto">
-          <div
-            id="captchaText"
-            class="h-12 flex-1 sm:flex-none sm:min-w-[95px] px-4 flex items-center justify-center border border-gray-300 rounded-lg bg-gray-100 font-semibold tracking-widest text-gray-800 text-sm sm:text-base"
-          ></div>
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <div
+                id="captchaText"
+                class="h-12 flex-1 sm:flex-none sm:min-w-[95px] px-4 flex items-center justify-center border border-gray-300 rounded-lg bg-gray-100 font-semibold tracking-widest text-gray-800 text-sm sm:text-base"
+              ></div>
+
+              <button
+                type="button"
+                onclick="generateCaptcha()"
+                class="h-12 w-12 flex items-center justify-center rounded-lg border border-gray-300 text-xl text-gray-600 hover:text-black hover:bg-gray-50 shrink-0"
+                aria-label="Refresh captcha"
+              >
+                ↻
+              </button>
+            </div>
+          </div>
+
+          <input type="hidden" name="captcha_generated" id="captchaGenerated" />
 
           <button
-            type="button"
-            onclick="generateCaptcha()"
-            class="h-12 w-12 flex items-center justify-center rounded-lg border border-gray-300 text-xl text-gray-600 hover:text-black hover:bg-gray-50 shrink-0"
-            aria-label="Refresh captcha"
+            type="submit"
+            class="w-full bg-[#2C3691] hover:bg-blue-800 text-white py-3 rounded-lg font-semibold text-sm sm:text-base transition"
           >
-            ↻
+            Submit
           </button>
-        </div>
+        </form>
       </div>
-
-      <input type="hidden" name="captcha_generated" id="captchaGenerated" />
-
-      <button
-        type="submit"
-        class="w-full bg-[#2C3691] hover:bg-blue-800 text-white py-3 rounded-lg font-semibold text-sm sm:text-base transition"
-      >
-        Submit
-      </button>
-    </form>
-  </div>
-</div>
+    </div>
 
     <!-- Floating Toast -->
     <div
