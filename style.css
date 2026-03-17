@@ -493,3 +493,131 @@ box-shadow:0 14px 36px rgba(44,54,145,.35);
   position: relative;
 
 } */
+
+
+/* vision and mission and philosophy */
+
+  .vmp-dot-grid {
+    background-image: radial-gradient(circle, rgba(26, 58, 31, 0.055) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .vmp-swiper {
+    overflow: hidden !important;
+  }
+
+  .vmp-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .vmp-swiper .swiper-slide {
+    height: auto !important;
+    display: flex;
+  }
+
+  .vmp-card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .vmp-body {
+    overflow: hidden;
+    transition: all 0.35s ease;
+  }
+
+  .vmp-card.is-open .vmp-body {
+    overflow-y: auto;
+    padding-right: 6px;
+  }
+
+  .vmp-card.is-open .vmp-body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .vmp-card.is-open .vmp-body::-webkit-scrollbar-thumb {
+    background: rgba(132, 204, 22, 0.45);
+    border-radius: 999px;
+  }
+
+  .vmp-extra {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.45s cubic-bezier(.4,0,.2,1), opacity 0.35s ease;
+  }
+
+  .vmp-extra.open {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  .vmp-toggle.open svg {
+    transform: rotate(180deg);
+  }
+
+  .vmp-dots .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    background: rgba(132, 204, 22, 0.3);
+    border-radius: 999px;
+    opacity: 1;
+    transition: all 0.35s ease;
+    margin: 0 !important;
+  }
+
+  .vmp-dots .swiper-pagination-bullet-active {
+    width: 22px;
+    background: #84cc16;
+  }
+
+  .vmp-btn.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .vmp-card {
+    animation: fadeUp 0.55s cubic-bezier(.22,.68,0,1.1) both;
+  }
+
+  .swiper-slide:nth-child(1) .vmp-card {
+    animation-delay: 0.05s;
+  }
+
+  .swiper-slide:nth-child(2) .vmp-card {
+    animation-delay: 0.15s;
+  }
+
+  .swiper-slide:nth-child(3) .vmp-card {
+    animation-delay: 0.25s;
+  }
+
+  @media (max-width: 639px) {
+    .vmp-card {
+      height: 450px;
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .vmp-card {
+      height: 470px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .vmp-card {
+      height: 490px;
+    }
+  }
