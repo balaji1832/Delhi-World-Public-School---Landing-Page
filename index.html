@@ -31,99 +31,131 @@
 
   <body class="min-h-screen">
     <!-- HEADER / NAVBAR -->
-    <header
-      class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50"
-    >
-      <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          <!-- LEFT: Logo -->
-          <a href="/" class="flex items-center">
-            <img
-              src="school-images/Logo.svg"
-              alt="Delhi World Public School"
-              class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
-            />
-          </a>
+    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
+  <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
 
-          <!-- RIGHT: Desktop Menu -->
-          <nav
-            class="hidden lg:flex items-center gap-10 text-gray-700 font-medium"
-          >
-            <a
-              href="#home"
-              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Home
-            </a>
+      <!-- LEFT: Logo -->
+      <a href="/" class="flex items-center">
+        <img
+          src="school-images/Logo.svg"
+          alt="Delhi World Public School"
+          class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+        />
+      </a>
 
-            <a
-              href="#promise"
-              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              About
-            </a>
+      <!-- RIGHT: Desktop Menu -->
+      <nav class="hidden lg:flex items-center
+            gap-4 xl:gap-10
+            text-[12.5px] xl:text-[15px]
+            text-gray-700 font-medium">
 
-            <a
-              href="#philosophy"
-              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Philosophy
-            </a>
+  <a href="#home"
+    class="nav-link whitespace-nowrap relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">
+    Home
+  </a>
 
-            <a
-              href="#academic-programs"
-              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Academic Programs
-            </a>
+  <a href="#promise"
+    class="nav-link whitespace-nowrap relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">
+    About
+  </a>
 
-            <a
-              href="#facilities"
-              class="nav-link relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Facilities
-            </a>
-          </nav>
+  <a href="#philosophy"
+    class="nav-link whitespace-nowrap relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">
+    Philosophy
+  </a>
 
-          <!-- Mobile Menu Button -->
-          <button
-            id="menuBtn"
-            class="lg:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100"
-          >
-            <svg
-              class="w-7 h-7"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+  <a href="#academic-programs"
+    class="nav-link whitespace-nowrap relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">
+    Academic Programs
+  </a>
+
+  <a href="#facilities"
+    class="nav-link whitespace-nowrap relative after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-green-600 after:transition-all after:duration-300 hover:after:w-full">
+    Facilities
+  </a>
+
+  <!-- Mandatory Disclosure Dropdown -->
+  <div class="relative group flex-shrink-0">
+    <button class="flex items-center gap-1 whitespace-nowrap text-gray-700 font-medium hover:text-green-600 focus:outline-none transition-colors duration-200">
+      Mandatory Disclosure
+      <svg class="w-3.5 h-3.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180"
+        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <!-- Dropdown Panel -->
+    <div class="absolute top-full right-0 mt-3 w-60 bg-white border border-gray-100 rounded-lg shadow-xl
+                opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50">
+      <ul class="py-2">
+        <li><a href="https://dwpsludhiana.com//upload/Certificates/RESULT.pdf"  target="_blank"         class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">Result</a></li>
+        <li><a href="https://dwpsludhiana.com//upload/Certificates/PTA.pdf"     target="_blank"          class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">PTA</a></li>
+        <li><a href="#rte-doc"          class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">RTE Doc</a></li>
+        <li><a href="https://dwpsludhiana.com//upload/Certificates/FEE%20STRUCTURE.pdf" target="_blank"    class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">Fee Structure</a></li>
+        <li><a href="https://dwpsludhiana.com//upload/Certificates/Water%20Certificate.pdf"  target="_blank"      class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">Water Certificate</a></li>
+        <li><a href="#building-safety"  class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">Building Safety Certificate</a></li>
+        <li><a href="https://dwpsludhiana.com//upload/Certificates/CBSE%20AFFILIATION%20LETTER%20SENIOR%20SECONDARY%20DWPS%20LUDHIANA.pdf" target="_blank" class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">CBSE Affiliation Letter</a></li>
+        <li><a href="https://dwpsludhiana.com//upload/Certificates/Calender2024.pdf"    target="_blank" class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">DWPS Annual Activities Calendar</a></li>
+        <li><a href="#fire-safety"  target="_blank"     class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">Fire Safety Doc</a></li>
+        <li><a href="#self-certificate" target="_blank" class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors duration-150">Self Certificate</a></li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn"
+        class="lg:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t bg-white">
+    <nav class="flex flex-col p-4 space-y-3 text-gray-700 font-medium">
+
+      <a href="#home"              class="hover:text-[#056839]">Home</a>
+      <a href="#promise"           class="hover:text-[#056839]">About</a>
+      <a href="#philosophy"        class="hover:text-[#056839]">Philosophy</a>
+      <a href="#academic-programs" class="hover:text-[#056839]">Academic Programs</a>
+      <a href="#facilities"        class="hover:text-[#056839]">Facilities</a>
+
+      <!-- Mobile: Mandatory Disclosure Accordion -->
+      <div>
+        <button id="mobileDisclosureBtn"
+          class="flex items-center justify-start w-full text-left hover:text-[#056839] focus:outline-none">
+          <span>Mandatory Disclosure</span>
+          <svg id="mobileDisclosureArrow"
+            class="w-4 h-4 ms-10 transition-transform duration-200"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div id="mobileDisclosureMenu" class="hidden flex-col mt-2 ml-4 space-y-2 text-sm text-gray-600">
+          <a href="https://dwpsludhiana.com//upload/Certificates/RESULT.pdf"    target="_blank"         class="hover:text-[#056839]">Result</a>
+          <a href="https://dwpsludhiana.com//upload/Certificates/PTA.pdf"              target="_blank"      class="hover:text-[#056839]">PTA</a>
+          <a href="#rte-doc"          target="_blank"      class="hover:text-[#056839]">RTE Doc</a>
+          <a href="https://dwpsludhiana.com//upload/Certificates/FEE%20STRUCTURE.pdf"    target="_blank"     class="hover:text-[#056839]">Fee Structure</a>
+          <a href="https://dwpsludhiana.com//upload/Certificates/Water%20Certificate.pdf"       target="_blank"      class="hover:text-[#056839]">Water Certificate</a>
+          <a href="#building-safety"  target="_blank"      class="hover:text-[#056839]">Building Safety Certificate</a>
+          <a href="https://dwpsludhiana.com//upload/Certificates/CBSE%20AFFILIATION%20LETTER%20SENIOR%20SECONDARY%20DWPS%20LUDHIANA.pdf" target="_blank" class="hover:text-[#056839]">CBSE Affiliation Letter</a>
+          <a href="https://dwpsludhiana.com//upload/Certificates/Calender2024.pdf"    target="_blank"     class="hover:text-[#056839]">DWPS Annual Activities Calendar</a>
+          <a href="#fire-safety"      target="_blank"      class="hover:text-[#056839]">Fire Safety Doc</a>
+          <a href="https://dwpsludhiana.com//upload/Certificates/SELF%20CERTTIFICATE.pdf" target="_blank" class="hover:text-[#056839]">Self Certificate</a>
         </div>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden lg:hidden border-t bg-white">
-        <nav class="flex flex-col p-4 space-y-3 text-gray-700 font-medium">
-          <a href="#home" class="text-black hover:text-[#056839]"> Home </a>
-
-          <a href="#promise" class="hover:text-[#056839]"> About </a>
-
-          <a href="#philosophy" class="hover:text-black"> Philosophy </a>
-
-          <a href="#academic-programs" class="hover:text-black">
-            Academic Programs
-          </a>
-
-          <a href="#facilities" class="hover:text-black"> Facilities </a>
-        </nav>
-      </div>
-    </header>
+    </nav>
+  </div>
+</header>
 
     <main>
       <!-- banners -->
@@ -3158,88 +3190,96 @@
 
     <!-- Form script -->
     <script>
-      function openModal() {
-        document.getElementById("admissionModal").classList.remove("hidden");
-        generateCaptcha();
-      }
+  function openModal() {
+    document.getElementById("admissionModal").classList.remove("hidden");
+    generateCaptcha();
+  }
 
-      function closeModal() {
-        document.getElementById("admissionModal").classList.add("hidden");
-      }
+  function closeModal() {
+    document.getElementById("admissionModal").classList.add("hidden");
+  }
 
-      function generateCaptcha() {
-        const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-        let captcha = "";
+  function generateCaptcha() {
+    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    let captcha = "";
 
-        for (let i = 0; i < 5; i++) {
-          captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-        }
+    for (let i = 0; i < 5; i++) {
+      captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
 
-        document.getElementById("captchaText").innerText = captcha;
-        document.getElementById("captchaGenerated").value = captcha;
-      }
+    document.getElementById("captchaText").innerText = captcha;
+    document.getElementById("captchaGenerated").value = captcha;
+  }
 
-      document
-        .getElementById("admissionModal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) {
-            closeModal();
-          }
-        });
+  document.addEventListener("DOMContentLoaded", function () {
+    const admissionModal = document.getElementById("admissionModal");
 
-      function showToast(type, message) {
-        const toast = document.getElementById("toast");
-        const toastBox = document.getElementById("toastBox");
-        const toastMessage = document.getElementById("toastMessage");
-        const toastIcon = document.getElementById("toastIcon");
-
-        toastMessage.textContent = message;
-
-        if (type === "success") {
-          toastBox.className =
-            "min-w-[280px] max-w-sm rounded-xl shadow-2xl px-5 py-4 text-white font-medium flex items-start gap-3 bg-green-600";
-          toastIcon.textContent = "✓";
-        } else {
-          toastBox.className =
-            "min-w-[280px] max-w-sm rounded-xl shadow-2xl px-5 py-4 text-white font-medium flex items-start gap-3 bg-red-600";
-          toastIcon.textContent = "⚠";
-        }
-
-        toast.classList.remove("translate-x-[120%]", "opacity-0");
-        toast.classList.add("translate-x-0", "opacity-100");
-
-        setTimeout(() => {
-          hideToast();
-        }, 3500);
-      }
-
-      function hideToast() {
-        const toast = document.getElementById("toast");
-        toast.classList.remove("translate-x-0", "opacity-100");
-        toast.classList.add("translate-x-[120%]", "opacity-0");
-      }
-
-      window.addEventListener("load", function () {
-        generateCaptcha();
-
-        const params = new URLSearchParams(window.location.search);
-        const toastType = params.get("toast");
-        const msg = params.get("msg");
-        const modal = params.get("modal");
-
-        if (toastType && msg) {
-          showToast(toastType, msg);
-        }
-
-        if (modal === "open") {
-          openModal();
-        }
-
-        if (toastType || msg || modal) {
-          const cleanUrl = window.location.pathname;
-          window.history.replaceState({}, document.title, cleanUrl);
+    if (admissionModal) {
+      admissionModal.addEventListener("click", function (e) {
+        if (e.target === this) {
+          closeModal();
         }
       });
-    </script>
+    }
+
+    generateCaptcha();
+  });
+
+  function showToast(type, message) {
+    const toast = document.getElementById("toast");
+    const toastBox = document.getElementById("toastBox");
+    const toastMessage = document.getElementById("toastMessage");
+    const toastIcon = document.getElementById("toastIcon");
+
+    toastMessage.textContent = message;
+
+    if (type === "success") {
+      toastBox.className =
+        "min-w-[280px] max-w-sm rounded-xl shadow-2xl px-5 py-4 text-white font-medium flex items-start gap-3 bg-green-600";
+      toastIcon.textContent = "✓";
+    } else {
+      toastBox.className =
+        "min-w-[280px] max-w-sm rounded-xl shadow-2xl px-5 py-4 text-white font-medium flex items-start gap-3 bg-red-600";
+      toastIcon.textContent = "⚠";
+    }
+
+    toast.classList.remove("translate-x-[120%]", "opacity-0");
+    toast.classList.add("translate-x-0", "opacity-100");
+
+    setTimeout(() => {
+      hideToast();
+    }, 3500);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById("toast");
+    toast.classList.remove("translate-x-0", "opacity-100");
+    toast.classList.add("translate-x-[120%]", "opacity-0");
+  }
+
+  window.addEventListener("load", function () {
+    const params = new URLSearchParams(window.location.search);
+    const toastType = params.get("toast");
+    const msg = params.get("msg");
+    const modal = params.get("modal");
+
+    if (toastType && msg) {
+      showToast(toastType, msg);
+    }
+
+    if (modal === "open") {
+      openModal();
+    } else {
+      setTimeout(() => {
+        openModal();
+      }, 2000);
+    }
+
+    if (toastType || msg || modal) {
+      const cleanUrl = window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
+  });
+</script>
   </body>
 </html>
