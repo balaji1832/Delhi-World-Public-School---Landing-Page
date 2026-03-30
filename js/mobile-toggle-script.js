@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
         navLinks.forEach(link => {
-          link.classList.remove("after:w-full", "text-green-600");
+          link.classList.remove("after:w-full", "text-blue-600");
         });
         const activeLink = document.querySelector('.nav-link[href="#' + id + '"]');
         if (activeLink) {
-          activeLink.classList.add("after:w-full", "text-green-600");
+          activeLink.classList.add("after:w-full", "text-blue-600");
         }
       }
     });
